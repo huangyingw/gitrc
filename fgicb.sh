@@ -5,6 +5,6 @@ do
   git init
   git add .
   git commit -am "n"
-  $HOME/bashrc/gclb.sh
+  $HOME/gitrc/gclb.sh
   cd - 1>/dev/null
 done

@@ -2,4 +2,4 @@
 git init
 git add .
 git commit -am "n"
-$HOME/bashrc/gclb.sh
+$HOME/gitrc/gclb.sh

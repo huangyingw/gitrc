@@ -1,0 +1,4 @@
+./fgicb.sh:8:  $HOME/bashrc/gclb.sh
+./g.sh:8:~/bashrc/gps.sh
+./gicb.sh:5:$HOME/bashrc/gclb.sh
+./gtag.sh:13:~/bashrc/gps.sh

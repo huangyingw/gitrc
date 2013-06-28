@@ -10,4 +10,4 @@ then
   exit 1
 fi
 git tag "$1" -m "$2"
-~/bashrc/gps.sh
+~/gitrc/gps.sh
