@@ -1,4 +1,4 @@
 #!/bin/bash
 git branch \
-  |grep \* \
+  |awk '/^\*/{print $2}' \
   && git checkout "$1"
