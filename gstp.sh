@@ -1,7 +1,7 @@
 #!/bin/bash
 if [ -z "$1" ];
 then
-  echo "Please provide the stash index"
-  exit 1
+    git stash pop
+else
+    git stash pop stash@{"$1"}
 fi
-git stash pop stash@{"$1"}
