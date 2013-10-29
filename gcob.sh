@@ -12,5 +12,5 @@ if [ -n "$2" ];
 then
     $current_branch="$2"
 fi
-~/gitrc/gcia.sh "before new branch $1 from $current_branch"
+~/gitrc/gcia.sh "before initiating new branch $1 from $current_branch"
 git checkout -b "$1"
