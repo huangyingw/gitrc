@@ -1,8 +1,11 @@
 #!/bin/bash
+red='\033[0;31m'
+green='\033[0;32m'
+NC='\033[0;0m' # No Color
 if [ -z "$1" ];
 then
-  echo "Please provide commit message"
-  exit 1
+    echo -e "${red}Please provide commit message ... ${NC}"
+    exit 1
 fi
 git commit  --no-verify -m "$1" && git gc
 ~/gitrc/gps.sh
