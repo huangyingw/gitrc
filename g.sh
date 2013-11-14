@@ -10,3 +10,4 @@ then
     exit 1
 fi
 git commit  --no-verify -m "$1" && git gc
+~/gitrc/gps.sh
