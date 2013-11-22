@@ -22,3 +22,4 @@ git branch --contains "$commit"
 #do
 #  git ls-tree -r --name-only $branch | grep "$1" | sed 's/^/'$branch': /'
 #done
+#http://stackoverflow.com/questions/372506/how-can-i-search-git-branches-for-a-file-or-directory
