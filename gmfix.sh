@@ -14,4 +14,5 @@ fi
 git checkout $previous_branch \
   && git merge $fix_branch \
   && ~/gitrc/gcia.sh "merge the fix from $fix_branch" \
+  && git merge $fix_branch \
   && git branch -d $fix_branch
