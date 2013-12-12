@@ -7,7 +7,7 @@ NC='\033[0;0m' # No Color
 commit_message='n'
 if [ -n "$1" ];
 then
-  $commit_message="$1"
+  commit_message="$1"
 fi
 git commit -am "$commit_message" && git gc
 ~/gitrc/gps.sh              
