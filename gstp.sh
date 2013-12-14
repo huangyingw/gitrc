@@ -8,5 +8,6 @@ then
   exit 0
 fi
 top_branch=`git stash list|awk 'NR==1{print $4}'|sed 's/://g'`
+git branch |awk '/^\*/{print $2}'
 git co $top_branch
 git stash pop
