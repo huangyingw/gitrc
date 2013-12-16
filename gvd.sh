@@ -1,13 +1,12 @@
 #!/bin/bash
-if (git status|grep -q 'nothing to commit')
+if [ -n "$1" ];
 then
-  git difftool `git log --oneline|awk 'NR==2{print $1}'`
-  exit 0
+  git difftool "$1"
 else
-  if [ -z "$1" ];
+  if (git status|grep -q 'nothing to commit')
   then
-    git difftool
+    git difftool `git log --oneline|awk 'NR==2{print $1}'`
   else
-    git difftool "$1"
+    git difftool
   fi
 fi
