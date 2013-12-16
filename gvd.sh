@@ -1,7 +1,12 @@
 #!/bin/bash
 if [ -n "$1" ];
 then
-  git difftool "$1"
+  if [ -n "$2" ];
+  then
+    git difftool "$1" "$2"
+  else
+    git difftool "$1"
+  fi
 else
   if (git status|grep -q 'nothing to commit')
   then
