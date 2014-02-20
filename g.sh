@@ -9,5 +9,5 @@ if [ -n "$1" ];
 then
   commit_message="$1"
 fi
-git commit  --no-verify -m "$commit_message" && git gc
+git commit  --no-verify -m "$commit_message"
 ~/gitrc/gps.sh

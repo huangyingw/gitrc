@@ -3,5 +3,5 @@ if [ -z "$1" ];
 then
   git add .
 else
-  git add -f $1
+  git add $1
 fi

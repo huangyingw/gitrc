@@ -15,4 +15,5 @@ git checkout $previous_branch \
   && git merge $fix_branch \
   && ~/gitrc/gcia.sh "merge the fix from $fix_branch" \
   && git merge $fix_branch \
-  && git branch -d $fix_branch
+  && git branch -d $fix_branch \
+  && for ss in `git remote -v |awk '/\(fetch\)$/{print $1}'`; do git push $ss :$fix_branch; done
