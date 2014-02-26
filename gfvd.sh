@@ -12,3 +12,4 @@ then
   exit 1
 fi 
 git vd $previous_branch
+touch gfvd.already
