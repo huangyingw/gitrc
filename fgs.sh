@@ -10,10 +10,8 @@ do
     elif [ -d $1"/"$file"/.git" ]
     then
       cd $1"/"$file
-      if  ( git status|grep -q modified: )
-      then
-        echo `pwd`
-      fi 
+      echo `pwd`
+      ~/gitrc/gps.sh
       cd - 1>/dev/null
     fi
   fi 
