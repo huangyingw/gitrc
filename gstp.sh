@@ -15,5 +15,5 @@ fi
 top_branch=`git stash list|awk 'NR==v1 {print $4}' v1=$(($1+1)) |sed 's/://g'`
 echo $top_branch
 git branch |awk '/^\*/{print $2}'
-~/gitrc/gcom.sh $top_branch
+~/gitrc/gco.sh $top_branch
 git stash pop
