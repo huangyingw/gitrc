@@ -1,8 +1,8 @@
 #!/bin/bash
 if [ -n "$1" ];
 then
-  git status "$1" > find.cc
+  git status "$1" > find.findresult
 else
-  git status > find.cc 
+  git status > find.findresult 
 fi
-vi find.cc
+vi find.findresult
