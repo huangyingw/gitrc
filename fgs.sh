@@ -14,7 +14,7 @@ do
       then
         echo `pwd`
       fi 
-      ~/gitrc/gps.sh
+      ~/gitrc/gps.sh 1>/dev/null 2>&1
       cd - 1>/dev/null
     fi
   fi 
