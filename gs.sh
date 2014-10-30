@@ -5,4 +5,3 @@ then
 else
   git status > find.findresult 
 fi
-vi find.findresult
