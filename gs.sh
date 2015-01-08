@@ -5,3 +5,4 @@ then
 else
   git status > gs.findresult 
 fi
+vi gs.findresult
