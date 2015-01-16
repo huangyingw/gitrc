@@ -8,11 +8,11 @@ then
   git stash pop stash@{"$1"}
   exit 0
 fi
-#if ! (git status|grep -q 'nothing to commit')
-#then
-#  echo -e "${red}the git repository is unclean, please check it before continuing... ${NC}"
-#  exit 1
-#fi
+if ! (git status|grep -q 'nothing to commit')
+then
+  echo -e "${red}the git repository is unclean, please check it before continuing... ${NC}"
+  exit 1
+fi
 #if  ( echo $fix_branch|grep -q 'fix$' )
 #then
 #  echo -e "${red}gstp should not be run in fix branch ... ${NC}"
