@@ -6,11 +6,11 @@ fix_branch=`git branch |awk '/^\*/{print $2}'`
 previous_branch=`echo ${fix_branch} | sed -e "s|.fix$||"` 
 echo $fix_branch
 echo $previous_branch
-#if [ ! -f gfvd.already ];
-#then
-#  echo -e "${red}gfvd must be run before gmfix first ... ${NC}"
-#  exit 1
-#fi
+if [ ! -f gfvd.already ];
+then
+  echo -e "${red}gfvd must be run before gmfix first ... ${NC}"
+  exit 1
+fi
 if  ( ! echo $fix_branch|grep -q 'fix$' )
 then
   echo -e "${red}It must be run in fix branch ... ${NC}"
