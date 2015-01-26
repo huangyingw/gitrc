@@ -9,7 +9,7 @@ then
   exit 1
 fi
 
-commit=`git log --all -- "$1"|awk 'NR==1{print $2}'`
+commit=`git log --all -- "$1" | awk 'NR==1{print $2}'`
 if [ -z "$commit" ];
 then
   echo -e "${red}The file is not found ... ${NC}"
