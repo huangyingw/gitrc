@@ -7,8 +7,6 @@ then
   echo -e "${red}Please provide the new branch name ... ${NC}"
   exit 1
 fi
-current_branch=`git branch |awk '/^\*/{print $2}'`
-~/gitrc/gcia.sh "before initiating new branch $1 from $current_branch"
 if [ -n "$2" ];
 then
   git checkout -b "$1" "$2"
