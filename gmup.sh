@@ -17,5 +17,4 @@ then
   exit 1
 fi
 git checkout $up_branch \
-  && git merge $current_branch \
-  && ~/gitrc/gcia.sh "merge from $current_branch to $up_branch"
+  && git merge $current_branch
