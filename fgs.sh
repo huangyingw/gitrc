@@ -12,7 +12,7 @@ do
       cd $1"/"$file
       if  ( git status|grep -q modified: )
       then
-        echo `pwd`
+        echo `pwd` >> fgs.findresult
       fi 
       ~/gitrc/gps.sh 1>/dev/null 2>&1
       cd - 1>/dev/null
