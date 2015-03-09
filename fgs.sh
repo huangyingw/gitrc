@@ -1,4 +1,11 @@
 #!/bin/bash
+if [ -z "$1" ];
+then
+  TARGETEDIR="$PWD"
+else
+  TARGETEDIR="$1"
+fi
+RESULT="$TARGETEDIR"/fgs.findresult
 function rec_dir() {
 for file in `ls $1`
 do
@@ -12,7 +19,7 @@ do
       cd $1"/"$file
       if  ( git status|grep -q modified: )
       then
-        echo `pwd` >> fgs.findresult
+        echo `pwd` >> "$RESULT"
       fi 
       ~/gitrc/gps.sh 1>/dev/null 2>&1
       cd - 1>/dev/null
@@ -20,9 +27,5 @@ do
   fi 
 done
 }
-if [ -n "$1" ]
-then
-  rec_dir $1
-else
-  rec_dir .
-fi
+echo > "$RESULT"
+rec_dir "$TARGETEDIR"
