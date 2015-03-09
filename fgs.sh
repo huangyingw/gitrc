@@ -29,3 +29,4 @@ done
 }
 echo > "$RESULT"
 rec_dir "$TARGETEDIR"
+vi "$RESULT"
