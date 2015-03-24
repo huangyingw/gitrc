@@ -19,9 +19,8 @@ do
       cd "$1/$file"
       if  ( git status|grep -q modified: )
       then
-        echo "`pwd` --> unclean" >> "$RESULT"
+        echo "$1/$file --> unclean" >> "$RESULT"
       fi 
-      ~/gitrc/gps.sh 1>/dev/null 2>&1
       cd - 1>/dev/null
     else
       rec_dir "$1/$file" $(($2 + 1))
@@ -31,3 +30,4 @@ done
 }
 rm "$RESULT"
 rec_dir "$TARGETEDIR" 0
+vi "$RESULT"
