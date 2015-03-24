@@ -19,7 +19,7 @@ do
       cd "$1/$file"
       if  ( git status|grep -q modified: )
       then
-        echo "$1/$file --> unclean" >> "$RESULT"
+        echo "$1/$file" >> "$RESULT"
       fi 
       cd - 1>/dev/null
     else
