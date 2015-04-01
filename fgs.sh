@@ -20,6 +20,8 @@ do
       if  ( git status|grep -q modified: )
       then
         echo "$1/$file" >> "$RESULT"
+      else
+        ~/gitrc/gpl.sh
       fi 
       cd - 1>/dev/null
     else
