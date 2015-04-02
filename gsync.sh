@@ -1,3 +1,3 @@
 #!/bin/bash
-~/gitrc/gmet.sh "$1" \
+~/loadrc/gitrc/gmet.sh "$1" \
  && git merge "$1"
